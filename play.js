@@ -1,6 +1,8 @@
 
 const {connect} = require('./client');
+const {setupInput} = require('./input');
 console.log('Connecting ...');
+// connect tot he server
 connect();
 
 
@@ -11,26 +13,7 @@ connect();
  * // For this we'll need our trusty stdin (standard input) object.
  * 
  */
+setupInput();
 
 
-const setUpInput = function (){
 
-   const stdin = process.stdin;
-   stdin.setRawMode(true);
-   stdin.setEncoding('utf8');
-   stdin.resume();
-
-   const handleUserInput = function(key){
-    if (key === '\u0003') {
-      process.exit();
-    }
-   }
-
-   stdin.on('data', handleUserInput);
-  
-
-  return stdin;
-
-}
-
-setUpInput();
