@@ -1,6 +1,8 @@
 
 const {connect} = require('./client');
 const {setupInput} = require('./input');
+
+
 console.log('Connecting ...');
 // connect tot he server
 // client connection object is conn which is returned by client.js
