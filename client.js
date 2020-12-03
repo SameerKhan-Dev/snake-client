@@ -22,6 +22,12 @@ const connect = function() {
 
   });
 
+  // print a message to the screen when the connection is succesfully established.
+  conn.on('connect', () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: SNK");
+  });
+
   return conn;
 }
 
