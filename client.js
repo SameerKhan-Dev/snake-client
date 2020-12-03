@@ -26,7 +26,21 @@ const connect = function() {
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
     conn.write("Name: SNK");
-  });
+    /*
+    setTimeout(function(){      
+      conn.write("Move: up")
+    
+      setTimeout(function(){      
+        conn.write("Move: left")}, 2000);
+      //conn.write("Move: up");
+        
+    
+    }, 1000);
+    //conn.write("Move: up");
+    */   
+    /* setInterval(function(){ conn.write("Move: up"); }, 1000);
+
+    });*/
 
   return conn;
 }
