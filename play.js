@@ -3,7 +3,8 @@ const {connect} = require('./client');
 const {setupInput} = require('./input');
 console.log('Connecting ...');
 // connect tot he server
-connect();
+// client connection object is conn which is returned by client.js
+conn = connect();
 
 
 /**
@@ -13,7 +14,7 @@ connect();
  * // For this we'll need our trusty stdin (standard input) object.
  * 
  */
-setupInput();
+setupInput(conn);
 
 
 
