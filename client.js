@@ -39,8 +39,8 @@ const connect = function() {
     //conn.write("Move: up");
     */   
     /* setInterval(function(){ conn.write("Move: up"); }, 1000);
-
-    });*/
+    */
+    });
 
   return conn;
 }
